@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Plus+Jakarta+Sans:wght@500;800&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+		<div class="left-container">
+			<img class="background-image" src="./images/bg-main-desktop.png" alt="">
+			<div class="card-front">
+				<img src="./images/bg-card-front.png" alt="">
+				<div class="white_circle"></div>
+				<div class="small_circle"></div>
+				<span class="card-number" id="card-no">9591 6489 6389 101E</span>
+				<span class="card-holder" id="card-name">JANE APPLESEED</span>
+				<span class="card-expiry" id="card-exp" >00/00</span>
+			</div>
+			<div class="card-back">
+				<img src="./images/bg-card-back.png" alt="">
+				<span class="card-cvc" id="card-cvc">000</span>
+			</div>
+		</div>
+
+		<div class="right-container">
+			<div class="form-container">
+				<div class="Ncontainer">
+					<span class="input_name">CARDHOLDER NAME</span>
+					<input id="CNinput" type="text" placeholder="e.g. Jane Appleseed">
+					<span class="name_error">Name field can't be blank</span>
+				</div>
+				<div class="CNoContainer">
+					<span class="input_name">CARD NUMBER</span>
+					<input id="CNoInput" type="text" placeholder="e.g. 1234 5678 9123 0000">
+					<span class="card_no_error">Wrong format. Numbers only</span>
+				</div>
+				<div class="exp-date-container">
+					<div class="date-container">
+						<span class="input_name">EXP.DATE (MM/YY)</span>
+						<div class="date-input-container">
+							<div class="date-input">
+								<input class="mm-input" id="mm-input" type="text" placeholder="MM">
+								<input class="mm-input" id="yy-input" type="text" placeholder="YY">
+							</div>
+							<span class="date_error">Can't be blank</span>
+						</div>
+					</div>
+					<div class="cvc-container">
+						<span class="input_name">CVC</span>
+						<input type="text" name="" id="cvc" placeholder="e.g. 123">
+						<span class="cvc_error">Can't be blank</span>
+					</div>
+				</div>
+				<button id="confirm">Confirm</button>
+				</div>
+
+				<div class="success-container">
+					<img src="./images/icon-complete.svg" alt="">
+					<div class="success-text">
+						<span>THANK YOU!</span>
+						<span class="gray-text">We've added your card details</span>
+					</div>
+					<button id="continue">Continue</button>
+				</div>
+			
+		</div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

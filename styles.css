@@ -1,0 +1,351 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-family: 'Space Grotesk', 'Outfit', 'Plus Jakarta Sans',  sans-serif;
+}
+html, body{
+	height: 100%;
+	font-size: 16px;
+	line-height: 24px;
+	background-color: rgb(78, 77, 77);
+}
+.container{
+	width: 1200px;
+	display: flex;
+	height: 100%;
+	padding: 0 ;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.left-container{
+	display:flex;
+	position: relative;
+	margin: 0;
+	height: 100%;
+	width: 50%;
+}
+.right-container{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items:200px;
+	height: 100%;
+	width: 50%;
+	color: hsl(278, 68%, 11%);
+}
+.background-image{
+	display:flex;
+	width: 75%;
+}
+.card-front{
+	display:block;
+	padding: 0;
+	position:absolute;
+	top: 160px;
+	left: 140px;
+}
+.card-back{
+	display: block;
+	padding: 0;
+	position:absolute;
+	top: 450px;
+	left: 190px;
+}
+.white_circle{
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	position:absolute;
+	top: 40px;
+	left: 35px;
+	background-color: #fff;
+}
+.small_circle{
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	position:absolute;
+	top: 50px;
+	left: 90px;
+	border: 1px solid white;
+}
+.card-number {
+	display: flex;
+	position:absolute;
+	top: 140px;
+	left: 35px;
+	font-size: 26px;
+	letter-spacing: 4px;
+	color: white;
+}
+.card-holder {
+	display: flex;
+	position: absolute;
+	top: 190px;
+	left: 30px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color: white;
+}
+.card-expiry {
+	display: flex;
+	position: absolute;
+	top: 190px;
+	left: 365px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color: white;
+}
+.card-cvc {
+	display: flex;
+	position: absolute;
+	top: 108px;
+	left: 355px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color: white;
+}
+.form-container{
+	margin: 0 auto;
+	height: 200px;
+	width: 400px;
+	position: absolute;
+	top: 25%;
+	left: 20%;
+}
+button {
+	width: 100%;
+	margin: 14px 8px 0 0;
+	padding: 14px;
+	font-size: 18px;
+	border-radius: 8px;
+	background-color: hsl(278, 68%, 11%);
+	color: hsl(0, 0%, 100%);
+}
+input {
+	margin: 0 8px 4px 0;
+	padding: 12px;
+	border-radius: 8px;
+	border: 2px solid hsl(270, 3%, 87%);
+	size: 200px;
+	font-size: 20px;
+	cursor: pointer;
+	-webkit-transition: 0.5s;
+}
+input:focus {
+	margin: 0 8px 4px 0;
+	padding: 12px;
+	border-radius: 8px;
+	border: 2px solid hsl(278, 68%, 11%);
+	size: 200px;
+	font-size: 20px;
+	outline: none;
+}
+.Ncontainer{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.CNoContainer{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.exp-date-container{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.date-container{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.date-input-container{
+	display: flex;
+	flex-direction: column;
+}
+.date-input{
+	display: flex;
+	flex-direction: row;
+}
+.cvc-container{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.input_name{
+	margin: 20px 0 6px 0;
+}
+.name_error,
+.card_no_error,
+.date_error,
+.cvc_error{
+	display: none;
+	color: red;
+	font-size: 12px;
+}
+.success-container{
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	height: 200px;
+	width: 400px;
+	position: absolute;
+	top: 30%;
+	left: 20%;
+}
+.success-text{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+}
+.gray-text{
+	color: hsl(279, 6%, 55%);
+}
+.mm-input{
+	width: 50%;
+}
+.yy-input{
+	width: 50%;
+}
+.error{
+	border: 2px solid red;
+}
+@media (max-width: 375px) {
+	
+	.container{
+		width: 370px ;
+		flex-direction: column;
+		background-color: white;
+	}
+	.left-container{
+		width: 100%;
+		height: 40%;
+	}
+	.right-container{
+		width: 100%;
+		height: 60%;
+	}
+	.background-image{
+		width: 100%;
+		height: 230px;
+	}
+	.card-front{
+		width: 75%;
+		z-index: 1;
+		top: 120px;
+		left: 20px;
+	}
+	.card-back{
+		width: 75%;
+		top: 38px;
+		left: 70px;
+	}
+	.white_circle{
+		height: 30px;
+		width: 30px;
+		top: 20px;
+		left: 20px;
+	}
+	.small_circle{
+		height: 15px;
+		width: 15px;
+		top: 28px;
+		left: 65px;
+	}
+	.card-front img{
+		width: 100%;
+	}
+	.card-back img{
+		width: 100%;
+	}
+	.card-number {
+		top: 90px;
+		left: 20px;
+		font-size: 14px;
+	}
+	.card-holder {
+		top: 120px;
+		left: 20px;
+		font-size: 8px;
+	}
+	.card-expiry {
+		top: 120px;
+		left: 200px;
+		font-size: 8px;
+	}
+	.card-cvc {
+		top: 63px;
+		left: 220px;
+		font-size: 10px;
+	}
+	.form-container{
+		flex-direction: column;
+		width: 300px;
+		top:5%;
+		left: 10%;
+	}
+	button {
+		font-size: 16px;
+	}
+	input {
+		padding: 10px;
+		size: 100px;
+		font-size: 12px;
+	}
+	input:focus {
+		padding: 10px;
+		size: 100px;
+		font-size: 12px;
+		
+	}
+	.Ncontainer{
+		font-size: 14px;
+	}
+	.CNoContainer{
+		font-size: 14px;
+	}
+	.exp-date-container{
+		font-size: 14px;
+	}
+	.input_name{
+		margin: 10px 0 3px 0;
+	}
+	
+	.name_error,
+	.card_no_error,
+	.date_error,
+	.cvc_error{
+		font-size: 10px;
+	}
+	
+	.success-container{
+		width: 300px;
+		top:15%;
+		left: 10%;
+	}
+	.success-text{
+		font-size: 26px;
+		margin: 40px 0 ;
+	}
+	.gray-text{
+		font-size: 16px;
+		margin: 20px 0 0 0;
+	}
+	.error{
+		border: 1px solid red;
+	}
+}
